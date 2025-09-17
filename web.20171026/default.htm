@@ -1,0 +1,105 @@
+﻿
+<html>
+<head>	<meta http-equiv="Content-Type" content="text/html;CHARSET=utf-8">   
+	<meta name="description" content="行列輸入法使用者園地，行列程式免費下載及問題服務">
+	<meta name="keyword" content="行列輸入法,中文輸入法,線上教學,免費下載">
+	<title>行列輸入法的家</title>
+	<title>中文輸入法,線上教學,免費下載</title>
+  	<title>array chinese input method</title>
+        <!--BASE href="http://www.array.com.tw/"-->
+<script language="JavaScript">
+
+// global variables
+var id=10;
+var position=0;
+
+function scroll()
+{
+    // variables declaration
+    var i,k,msg="　　　　　　　　　　　　　　　　　　　　歡迎光臨！想知道「行列」是如何創造每分鐘２１５﹒５字的記錄嗎？您知道行列連續三年獲全國技藝競賽中文輸入冠軍嗎？";
+
+    // show it to the window
+    document.header.scroll.value=msg.substring(position);
+
+    // set new position
+    if(msg.length>52) position++;  //若為nevigator傳回的length為英文字數，若為IE其傳回值為(中文+英文)字數，故若以全形字來看，IE的傳回值會等於navigator的一半
+    if (position++ > msg.length)
+       position=0;
+
+    // repeat at entered speed
+    setTimeout("scroll()",300);
+}
+
+// end -->
+
+</script>
+</head>
+<body onload="scroll()" text="#FF0000" link="#0000FF" vlink="#FFA500" background="img000.jpg">
+<center><p><br><img src="img001.gif" align="CENTER"> 
+<br> 
+<form name="header">
+<input type="text" name="scroll" size="70">
+</p></center>
+ 
+<center><table>
+<tr>
+ <td align="MIDDLE" width="128"><a href="company/company.htm"><img src="img004.gif"></a></td>
+
+ <td align="MIDDLE" width="128"><a href="class/class.htm"><img src="img006.gif"></a></td>
+
+ <td align="MIDDLE" width="128"><a href="keytool/keytool.htm"><img src="img005.gif"></a></td>
+
+ <td align="MIDDLE" width="128"><a href="product/product.htm"><img src="img007.gif"></a></td>
+</tr>
+ 
+<tr>
+ <td align="MIDDLE" width="128"><a href="company/company.htm">行列的家</a></td>
+ 
+ <td align="MIDDLE" width="128"><a href="class/class.htm">行列教室</a> </td>
+ 
+ <td align="MIDDLE" width="128"><a href="keytool/keytool.htm">慎選輸入法</a></td>
+ 
+ <td align="MIDDLE" width="128"><a href="product/product.htm">產品櫥窗</a></td>
+</tr>
+</table></center>
+
+<br>
+<center><table>
+<tr>
+ <td align="MIDDLE" width="128"><a href="BOX/BOX1.htm"><img src="BOX/img501.giF"></a></td>
+ 
+ <td align="MIDDLE" width="128"><a href="BOX/BOX2.htm"><img src="BOX/img502.gif"></a></td>
+ 
+ <td align="MIDDLE" width="128"><a href="BOX/BOX3.htm"><img src="BOX/img503.gif"></a></td>
+ 
+ <td align="MIDDLE" width="128"><a href="BOX/BOX4.htm"><img src="BOX/img504.gif"></a></td>
+ 
+ <td align="MIDDLE" width="128"><a href="BOX/BOX5.htm"><img src="BOX/img505.gif"></a></td>
+</tr>
+ 
+<tr>
+ <td align="MIDDLE" width="128"><a href="BOX/BOX1.htm">最新消息</a></td>
+ 
+ <td align="MIDDLE" width="128"><a href="BOX/BOX2.htm">問題集錦</a></td>
+ 
+ <td align="MIDDLE" width="128"><a href="BOX/BOX3.htm">誰來挑戰</a></td>
+ 
+ <td align="MIDDLE" width="128"><a href="BOX/BOX4.htm">讀者信箱</a></td>
+ 
+ <td align="MIDDLE" width="128"><a href="BOX/BOX5.htm">資 料 庫</a></td>
+</tr>
+</table></center>
+
+<p><font color="#000080">
+
+
+<center><img src="img002.gif" alt="圖片：分隔線"></center>
+
+<p><center>本網站更新異動記錄請看「最新消息」項！</center>
+</p>
+
+
+</font>
+
+</body>
+</html>
