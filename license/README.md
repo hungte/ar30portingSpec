@@ -1,7 +1,3 @@
-行列的授權書中文是在官網上可供下載，但可能是因為它使用了
-中文檔名的關係（再加上舊網頁是 Big5 碼系統配上 Windows 伺服器），
-webarchive 似乎沒有正確的備份。
-
 我當年在作 m17n 與 jscin 的移植時有遇到外國的開發者無法確認
 中文授權書的關係，於是與行列科技洽詢，幫他們起草了英文版的
 授權書，後來也變成放在官網上的版本。當時有獲得原始的中文授
@@ -9,4 +5,4 @@ webarchive 似乎沒有正確的備份。
 
 - `array_license.pdf`: 英文授權書
 - `array_license_zhTW.doc`: 中文授權書 (來自行列科技)
-- `array_license_zhTW.pdf`: 中文授權書 (由我從doc 重新轉pdf)
+- `array_license_zhTW.pdf`: 中文授權書 (官網版本)
