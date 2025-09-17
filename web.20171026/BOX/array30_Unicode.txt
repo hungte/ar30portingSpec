@@ -1,0 +1,40 @@
+行列輸入法對照表說明
+
+■ar30synbol.txt 行列30符號對照表 (請詳ar30portingspec.txt的說明)
+
+■ar30hw.txt 行列30簡碼對照表 (請詳該表頭的文字說明)
+
+■array30_27489.txt (V201509)版：本次改版是為了去除會跟本字重碼的特別碼，感謝老刀協助完成
+   這是中文字可用2byte處理 的部份
+   即 Unicode 前20902字
+   加上 ，。：；○ 這幾個特殊符號碼
+   加上Unicode extension A 字集部份
+   請注意，這部份同碼字的編碼順序不能更動，因為重複字的排列順序。
+   編碼包括容錯輸入碼 
+
+
+■array30_ExtB.txt  此檔案為  Unicode Extension B 字集部份，每個字必需用4byte來記錄處理的部份編碼都包括容錯輸入碼 
+
+   編碼原則：以重複字排序以繁體字在前
+   如係罕用字或簡體字和繁體較常用字重複會在多加一個 I 碼, 以避免輸入常用字時出現過多重複字。
+   因此如該字原編碼 為ABCD 編碼就會成了ABCDI 五個輸入碼
+   如果該字原編碼為ABC 就會被編成 ABCI
+   所以輸入時碰到打不出來的字，只要多加一碼 I 就可以打出來。
+   在 array30_27489.txt 裡，只有不重複都不加罕用碼I
+   但在 array30_ExtB.txt  的字集裡都一律加罕用碼 I -- 因為假定那些字都很少用到。
+   有些特別碼因會和其他字編碼相同而造成需按選鍵，已失去原來的特別碼意義，故在本版本內拿掉。
+　　
+   ★本照表最初公佈於2005-0918
+   ★array30_ExtB_V2016A修正版：原對照表缺 U+20506(𠔆)字編碼特補正。
+
+■Array30_ExtCD.txt 
+
+   最新版本為2013-A 版：前版2012A版經JonathanChang校對發現2012A版(已刪)內的錯誤並協助訂正更新為本版。
+   此檔案為  Unicode Extension C&D字集部份，每個字必需用4byte來記錄。
+   編碼及字體是依據 The Unicode Standard 公佈的 Version 5.2 及CJK Unified Ideographs Extension D編成，
+   在此感謝老刀在編碼期間協助轉成對照表及測試。 也感謝JonathanChang校對2012A版的錯誤並協助訂正
+
+■ array30_Ext E.txt 為Unicode Extension E 字集部份的編碼
+
+
+行列廖明德
