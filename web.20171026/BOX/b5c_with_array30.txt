@@ -1,0 +1,102 @@
+
+http://www.array.com.tw/BOX/b5c_with_array30.htm
+36 captures
+15 Feb 2004 - 24 Jun 2012
+Apr	JAN	Jun
+Previous capture	26	Next capture
+2009	2012	2013
+  
+ About this capture
+◇ Re: 請問在b5c下可不可以新增行列輸入法??
+作者: woju  看板: BSD
+標題: Re: 請問在b5c下可不可以新增行列輸入法??
+時間: Mon Jul 20 14:58:43 1998
+
+※ 引述《iomega.bbs@bbs.im.tku.edu.tw (變身美少女戰士吧)》之銘言：
+:         在 X-Window 下己有內設行列輸入法..
+:         那在b5c下是不是可以手動新增行列輸入法呢??
+
+/usr/local/lib/xcin/xcin.help
+( 或 /usr/X11R6/lib/X11/lib/xcin/xcin.help)
+裏有些相關資料:
+(ftp://wj.ml.org/freebsd/woju/binary/b5c.txt)
+
+************ How to use **********************************
+★ xcin 必須搭配 crxvt 使用, 所有 keyboad input 應該在 crxvt 的 window 內輸入，
+   不是在 xcin 的 window 輸入。
+★ xcin & crxvt 也可以不用 et24m & vga12x24 的字型，請看以下的設定。
+---------------------------------------------------------------------------
+resource name    command line     Description
+(放在 .Xdefaults) 命令參數
+---------------------------------------------------------------------------
+xcin.fnb5:       -fnb5            Big5 字形 font name,(default:et24m)
+xcin.fn:         -fn              ASCII英文字形 font name,(default:vga12x24)
+xcin.geometry:   -g or -geometry  xcin 輸入視窗的位置
+                                          (e.g.  +100-0   at left-bottom)
+xcin.phokbm:     -phokbm          zo:    零壹
+                                  eten:  Eten
+                                  et26:  Eten 26
+                                  hsu:   許氏鍵盤
+
+xcin.vocbox:     -vocbox          your vocabulary box name, must be full path
+                                  詞庫輸入法的檔案名稱
+
+xcin.inmd:       -inmd            the input method you use
+                                  1:倉頡  3:注音  8:行列30
+                                  10:內碼  11:詞庫
+    如果你有設定此參數，則 xcin 執行後可直接按 ctrl-space 進入你要的輸入法。
+    你也不需要按 ctrl-alt-I 來選擇你的拆字顯示，都幫你設定好了。
+
+xcin.fg          -fg              foreground color
+xcin.bg          -bg              background color
+xcin.infg        -infg            fg color of input area
+xcin.inbg        -inbg            bg color of input area
+xcin.phrase      -phrase          your phrase file name  (binary format)
+                                  (Press Alt-Shift-  )
+xcin.going       -going           0:   不使用 (default)
+                                  1:   同國音的方式使用 '↓' 選同音字，
+                                       空白鍵可用來輸入空白
+xcin.vb          -vb              0:   不使用靜音
+                                  1:   使用靜音 (visual bell)
+-------- setup input method -----------------------------------------------
+如果你要使用倉頡、行列或是自己的輸入法，要用以下的參數
+
+xcin.in1         -in1       the input table you want to install over Ctrl-Alt-1
+                            (Example)       -in1 cj.tab    掛倉頡
+xcin.in2         -in2
+
+xcin.in4         -in4
+   |
+xcin.in5
+
+xcin.in7
+   |                                        -in8 ar30.tab  掛行列30
+xcin.in9         -in9
+------------------------------------------------------------------------
+與倚天類似的輸入環境:
+   .   ctrl-Space 中/英   shift-Space 全/半
+   .   ctrl-1  ctrl-3  ctrl-6 ctrl-8  ctrl-0  ctrl--  選擇輸入法
+   .   倉頡  行列30 均有 一級 二級 簡碼
+   .   倉頡  行列30 都有提供 wild card 功能, 即 類似DOS file name
+       中可用 '＊'或　'？'來取代未知部份的功能, 而且第一個 key
+       可用 '＊' 或 '？'
+   .   查詢拆字的功能(ctrl-alt-I) 可用注音查某字"倉頡","行列" 及任何以
+       cin2tab 產生的輸入法，也可以用來查 BIG5 內碼。
+   .   可使用片語 (Alt-Shift- Key)
+   .   Ctrl-Atl-R 重覆上一個字的功能
+   .   注音、倉頡、行列 ... 都有自動送字的功能
+       即若有重覆字時，若第一個字剛好是你要的字，可直接輸入下一個字，
+       不需要按數字鍵去選。你也可以按空白鍵送出第一個字。
+   .   目前已有輸入法 :
+           倉頡 注音 詞音(忘Ｘ) 行列30 內碼 詞庫
+--------------------------------------------------------------------------
+行列30, 倉頡, etc user's note:
+① 一級簡碼:
+        使用者可自定，行列30與市面上的相同。
+        若使用者沒有設定，則顯示下一個 key column 相同字中 BIG5 seq 最小的
+        字。
+② 2.3.4 ... 級簡碼
+        如果你忘了如何拆字，可以看看簡碼顯示的提示。
+★ 現在可以在 .cin 檔中定義 "詞" , 且可以形成重覆鍵,
+   See sample.cin for more information
+--------------------------------------------------------------------------

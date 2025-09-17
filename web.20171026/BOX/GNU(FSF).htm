@@ -1,0 +1,90 @@
+
+http://array.com.tw/BOX/GNU%28FSF%29.htm
+5 captures
+15 Jun 2004 - 9 Apr 2005
+Feb	APR	May
+Previous capture	09	Next capture
+2004	2005	2006
+  
+ About this capture
+輸入法
+沒有了中文輸入法， Emacs 對於中文使用者一點用處都沒有。想要知道您可以使用哪些輸入法，您可以鍵入 C-x RET C-\ SPC ，接著 Emacs 會出現一個所有多國語文的輸入法列表窗格。然後您就可以在其中鍵入您所使用的輸入法名稱了。下面是作者的作法：（作者使用的是行列輸入法，名稱為 chinese-array30 。）
+1. 設定預設的輸入法，將下面這一行加入到 ~/.emacs 檔案中：
+
+(custom-set-variables '(default-input-method "chinese-array30"))
+
+這樣子在啟動 Emacs 後，
+您就可以直接以 C-\ 指令在英文輸入和行列輸入法之間切換了。
+
+2. 但是有時候用行列打不出來，需要切換成注音輸入法。
+   有兩種方式可以達成這個目的：
+
+   a. C-x RET C-\ chinese-zozy RET
+   b. C-u C-\ chinese-zozy RET
+
+作者建議您使用第二種方式，因為它同時也是作為兩種輸入法間切換的指令。
+接下來您只要鍵入 C-u C-\ RET 就可以在行列和注音這兩者間作切換了。
+（注意：中英輸入法間的切換還是以 C-\ 指令為之。）
+
+以後我們在不同中文輸入法間作切換將可以 C-u C-u C-\ 達成，
+原本作者是建議以 M-\ 來補足這個想法，
+但是 M-\ 很不幸已經作為 delete-horizontal-space 指令了。
+不然 C-\ 搭配 M-\ 不是很漂亮嗎？
+
+這樣子您應該可以理解如何使用中文輸入環境了吧！
+當然，您必須將行列改為自己喜歡的輸入法。
+
+●●行列輸入法作者廖明德註：以下說明和行列無關，讀者可以不繼續看下去●●
+
+
+
+如果您找不到自己喜歡的輸入法，那麼您可以：
+
+1. 自己造一個（相關文獻在  .../emacs/leim/quail/ 。）
+2. 利用現成的輸入法檔案做出一個
+   （ .../emacs/lisp/international/titdic-cnv.el 。）
+   只要是 cxterm 的 *.tit 和 xcin 的 *.cin
+   有提供的輸入法都可以。
+   但是作法上對於終端使用者而言並不十分“自動”，
+   因此現階段可能還是需要志願者協助進行才有辦法。
+
+不知道 cxterm 和 xcin 的開發人員是否可以協助提供。
+（對了， cxterm 的行列輸入法有個小臭蟲，應該和誰聯繫？）
+幫忙引導 Emacs 的未來開發
+記得，您永遠可以發揮影響力來幫忙引導 Emacs 的未來開發。如果您想要看到 Emacs 擁有哪些功能，請告訴我們。這裡有兩封由作者作出建議的郵件片斷，提供您作為如何提出建議的參考：
+suggest.meta-aefb.emacs.txt
+suggest.meta-backslash.emacs.txt
+關於這些建議，經由 RMS 的幫忙最後由日本的 Ken'ishi HANDA 先生完成實作工作。如果您有興趣知道他對哪些檔案作出了修改，這裡是 HANDA 先生的說明：
+* international/characters.el: Fix syntaxes of gb2312 and big5.
+
+	* language/japan-util.el (sentence-end-save): Variable deleted.
+	(setup-japanese-environment-internal): Don't setup sentence-end.
+	(exit-japanese-environment): Function deleted.
+
+	* language/japanese.el ("Japanese"): Delete `exit-function'.
+
+	* textmodes/paragraphs.el (sentence-end): Add Chinese and Japanese
+	characters.
+當然，並不是每一個建議都是可行的。但是您永遠有作夢的權利！特別是當有可能讓大家的日子過得更好時，請務必告訴我們您作了什麼夢。
+也請通知您所使用的〔中文〕散佈件的開發者，請他們更新 Emacs 為目前的版本，並將下述的鏈接提供給他們：
+如何下載 Emacs 套件。
+
+返回 GNU 首頁。
+
+請將有關 自由軟體基金會 與 GNU 的 查詢 與 問題 送到 gnu@gnu.org。您也可以使用 其他方法聯繫 自由軟體基金會。
+
+請將有關網頁的意見送到 webmasters@www.gnu.org，其它問題則送到 gnu@gnu.org。
+
+請將有關中文網頁的意見送到 chinese-coordinators@gnu.org，其它問題則送到 chliu@gnu.org。
+
+Copyright (C) 2003 Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111, USA
+
+Verbatim copying and distribution of this entire article is permitted in any medium, provided this notice is preserved.
+【本文允許在不變更文件內容的前提下刊登在任何形式的媒體中，但需保留此聲明。】
+
+作者：劉 昭宏 <chliu@gnu.org>
+驗證：馬 雪萍
+請將有關翻譯的問題送到 GNU/CTT 的 翻譯人員。
+
+Updated: $Date: 2003/03/04 15:46:28 $ $Author: chstoneliu $
+
